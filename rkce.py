@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 
 
- #   Author: Junwei Huang
+ #    Author: Junwei Huang
  #    School of Mathematics and Computational Science & Hunan Key Laboratory for Computation and
  #    Simulation in Science and Engineering, Xiangtan University, Hunan 411105, China.
  #    e-mail: junweihuang@smail.xtu.edu.cn
@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
  #   atol    - Absolute tolerance for error control
  #   rtol    - Relative tolerance for error control
  #   yz      - Reference solution (exact or high-accuracy) for final error computation
- #   linear  - linear Stiffness Switch: input 1 if the equation is linearly stiff, and 0 for all other cases.
+ #   linear  - linear  Switch: The stiffness mainly arises from the diffusion term, which is set to 1, and 0 for all other cases.
  #
  # Outputs:
  #  nfe     - Total number of function evaluations (calls to df)
