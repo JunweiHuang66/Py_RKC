@@ -1,7 +1,7 @@
 # Adaptive RKC (Runge-Kutta-Chebyshev) Method for Stiff ODEs
 
 ## Introduction
-This project implements an adaptive Runge-Kutta-Chebyshev (RKC) method for solving stiff ordinary differential equations (ODEs) arising from the spatial discretization of partial differential equations (PDEs). The RKC scheme is an explicit method particularly suitable for problems with a large spectral radius. Adaptive time stepping based on local error estimation is included to improve efficiency.
+This project implements an adaptive Runge-Kutta-Chebyshev (RKC) method for solving stiff ordinary differential equations (ODEs) arising from the spatial discretization of partial differential equations (PDEs). 
 
 ## Features
 - Adaptive time stepping using local error estimation.
