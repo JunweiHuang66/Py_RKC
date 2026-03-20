@@ -1,0 +1,21 @@
+# Adaptive RKC (Runge-Kutta-Chebyshev) Method for Stiff ODEs
+
+## Introduction
+This project implements an adaptive Runge-Kutta-Chebyshev (RKC) method for solving stiff ordinary differential equations (ODEs) arising from the spatial discretization of partial differential equations (PDEs). The RKC scheme is an explicit method particularly suitable for problems with a large spectral radius. Adaptive time stepping based on local error estimation is included to improve efficiency.
+
+## Features
+- Adaptive time stepping using local error estimation.
+- Three error estimation strategies (switch `j1 = 1, 2, 3`).
+- Automatic spectral radius estimation for nonlinear problems.
+- Special treatment for linear problems (spectral radius estimated from diffusion term).
+
+## Dependencies
+- Python 3.6 or higher
+- NumPy (≥1.19)
+
+Optional: Matplotlib for result visualization.
+
+## Installation
+In an Anaconda3 environment, install NumPy via:
+```bash
+conda install numpy
