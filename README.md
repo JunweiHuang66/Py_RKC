@@ -7,7 +7,7 @@ This project implements an adaptive Runge-Kutta-Chebyshev (RKC) method for solvi
 - Adaptive time stepping using local error estimation.
 - Three error estimation strategies (switch `j1 = 1, 2, 3`).
 - Automatic spectral radius estimation for nonlinear problems.
-- Special treatment for linear problems (spectral radius estimated from diffusion term).
+
 
 ## Dependencies
 - Python 3.6 or higher
