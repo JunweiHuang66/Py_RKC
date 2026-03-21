@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 
 
- #    Author: Junwei Huang
+ #   Author: Junwei Huang
  #    School of Mathematics and Computational Science & Hunan Key Laboratory for Computation and
  #    Simulation in Science and Engineering, Xiangtan University, Hunan 411105, China.
  #    e-mail: junweihuang@smail.xtu.edu.cn
@@ -25,7 +25,8 @@ import matplotlib.pyplot as plt
  #   atol    - Absolute tolerance for error control
  #   rtol    - Relative tolerance for error control
  #   yz      - Reference solution (exact or high-accuracy) for final error computation
- #   linear  - linear  Switch: The stiffness mainly arises from the diffusion term, which is set to 1, and 0 for all other cases.
+ #   linear  - linear Stiffness Switch: input 1 if the equation is linearly stiff, and 0 for all other cases.
+ #   Dim     - linear Stiffness Switch: input 1
  #
  # Outputs:
  #  nfe     - Total number of function evaluations (calls to df)
@@ -258,7 +259,7 @@ def rkc2(Y, h, t, s, N, hx, atol, rtol, method, df):
     return yerr, y
 
 
-def rkce(y0, N, hx, j1, d, t0, t_end, atol, rtol, yz, linear,df):
+def rkce(y0, N, hx, j1, d, t0, t_end, atol, rtol, yz, linear,Dim,df):
     """
     Adaptive RKC method for stiff ODEs.
     Returns: nfe, err1, smaxz, nac, nre
@@ -272,7 +273,7 @@ def rkce(y0, N, hx, j1, d, t0, t_end, atol, rtol, yz, linear,df):
 
     if linear == 1:
         # Diffusion dominated: estimate spectral radius from diffusion term
-        lop1 = 4.0 * d * N ** 2
+        lop1 = 4.0 * d * N ** 2 *Dim
         nfe = 0
     else:
         R, fg1 = rodf(y0, N, hx,df)
